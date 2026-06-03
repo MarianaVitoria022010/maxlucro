@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxLucro - Criar Conta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="saiba-mais-container">
+        <header class="header-saiba-mais">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo MaxLucro">
+            </div>
+            <a href="{{ url_for('index') }}" class="btn-back">Voltar para o Login</a>
+        </header>
+
+        <section class="form-section">
+            <div class="form-container">
+                <h2>Criar Conta</h2>
+                <p>Preencha os dados abaixo para começar a usar o MaxLucro.</p>
+                
+                <form action="{{ url_for('cadastro') }}" method="POST">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0001-00" inputmode="numeric" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirmar_senha">Confirmar Senha</label>
+                        <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme sua senha" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

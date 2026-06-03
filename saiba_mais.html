@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxLucro - Saiba Mais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="saiba-mais-container">
+        <header class="header-saiba-mais">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo MaxLucro">
+            </div>
+            <a href="{{ url_for('index') }}" class="btn-voltar-topo">Voltar para o Login</a>
+        </header>
+
+        <section class="hero-section">
+    <div class="hero-conteudo">
+        <div class="hero-texto">
+            <h1>Economia Inteligente para o Seu Negócio</h1>
+            <p>Descubra como o MaxLucro transforma o poder da união em lucro real para o seu mercado.</p>
+        </div>
+        <div class="hero-imagem-dashboard">
+<img src= "https://images.unsplash.com/photo-1534723452862-4c874018d66d?auto=format&fit=crop&w=1000&q=80" alt="Mercadinho Parceiro">    
+</div>
+</section>
+
+        <section class="conteudo-secao">
+            <h2>Como o MaxLucro Funciona?</h2>
+            <div class="cards-grid">
+                <div class="card-info">
+                    <div class="card-icon">🤝</div>
+                    <h3>União de Forças</h3>
+                    <p>Conectamos pequenos e médios mercados da mesma região para somar o volume de suas demandas.</p>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-icon">📉</div>
+                    <h3>Poder de Negociação</h3>
+                    <p>Com pedidos maiores, negociamos direto com grandes indústrias e distribuidores, alcançando preços que antes só os gigantes tinham.</p>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-icon">💰</div>
+                    <h3>Margem de Lucro Maior</h3>
+                    <p>Comprando por um custo muito menor, você aumenta sua margem de lucro e ganha fôlego para competir de igual para igual.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-saiba-mais">
+            <p>Pronto para começar a lucrar mais?</p>
+            <a href="{{ url_for('index') }}" class="btn-entrar" style="width: auto; display: inline-block; padding: 12px 35px; text-decoration: none;">Acessar o Painel</a>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,883 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 🟢 LADO ESQUERDO: DESIGN INSTITUCIONAL */
+.left-panel {
+    width: 55%;
+    background-color: #0f5132;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 8%;
+}
+
+/* Moldura profissional da logo (Remove riscos e centraliza) */
+.logo-container {
+    background-color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 160px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.left-panel h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.left-panel .descricao {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #e2ebd5;
+}
+
+.left-panel .beneficios {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.left-panel .beneficios li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-saiba-mais {
+    width: fit-content;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #e68a22;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #e68a22;
+}
+
+/* 🔐 LADO DIREITO: FORMULÁRIO LIMPO */
+.right-panel {
+    width: 45%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 8%;
+}
+
+.login-header {
+    margin-bottom: 25px;
+}
+
+.right-panel h2 {
+    color: #0f5132;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.right-panel .subtitle {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #0f5132;
+    box-shadow: 0 0 0 4px rgba(15, 81, 50, 0.1);
+}
+
+.btn-entrar {
+    width: 100%;
+    padding: 14px;
+    background-color: #e68a22;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* ✨ ESTILIZAÇÃO COMPLETA DOS LINKS INFERIORES */
+.links-uteis {
+    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link-esqueceu {
+    font-size: 13px;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.link-esqueceu:hover {
+    color: #0f5132;
+    text-decoration: underline;
+}
+
+.txt-criar-conta {
+    font-size: 14px;
+    color: #475569;
+}
+
+.link-destaque {
+    color: #e68a22;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-destaque:hover {
+    color: #0f5132;
+    text-decoration: underline;
+}
+
+/* 📱 ADAPTAÇÃO AUTOMÁTICA PARA CELULAR */
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .left-panel, .right-panel { width: 100%; padding: 40px 6%; }
+    .left-panel { text-align: center; align-items: center; }
+    .left-panel .beneficios { display: inline-block; text-align: left; }
+}
+/* ==========================================
+   ✨ ESTILOS EXCLUSIVOS DA PÁGINA SAIBA MAIS
+   ========================================== */
+.saiba-mais-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-saiba-mais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #0f5132;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-voltar-topo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-voltar-topo:hover {
+    background-color: #ffffff;
+    color: #0f5132;
+}
+
+.hero-section {
+    background-color: #0f5132;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 10% 80px 10%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #e2ebd5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.conteudo-secao {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.conteudo-secao h2 {
+    color: #0f5132;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-info {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 30%;
+    min-width: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card-info h3 {
+    color: #334155;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-saiba-mais {
+    text-align: center;
+    padding: 50px 8%;
+    margin-top: auto;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-saiba-mais p {
+    font-size: 18px;
+    color: #334155;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Ajuste para telas de celulares na página saiba mais */
+@media (max-width: 768px) {
+    .header-saiba-mais { flex-direction: column; gap: 15px; text-align: center; }
+    .hero-section h1 { font-size: 28px; }
+    .hero-section p { font-size: 15px; }
+    .cards-grid { flex-direction: column; }
+    .card-info { width: 100%; }
+}
+
+/* ==========================================
+   📸 AJUSTE DO BANNER COM IMAGEM (HERO)
+   ========================================== */
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-texto {
+    flex: 1;
+    text-align: left; /* Alinhado à esquerda para dar contraste com a imagem */
+}
+
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra sutil para destacar */
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .hero-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-texto {
+        text-align: center;
+    }
+}
+/* ==========================================
+   📊 DESIGN PREMIUM ESTILO DASHBOARD (SAIBA MAIS)
+   ========================================== */
+
+/* Reduz o bloco da logo no topo para ficar super discreto */
+.header-saiba-mais .logo-container {
+    max-width: 90px; 
+    padding: 4px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.header-saiba-mais .logo-container img {
+    max-height: 32px; 
+    width: auto;
+}
+
+/* Título Gigante e Imponente */
+.hero-texto h1 {
+    font-size: 52px; 
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+/* Parágrafo de apoio refinado */
+.hero-texto p {
+    font-size: 20px; 
+    line-height: 1.6;
+    color: #cbd5e1; /* Cinza claro azulado elegante */
+    max-width: 480px;
+}
+
+/* Container da Imagem estilo Plataforma */
+.hero-imagem-dashboard {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização da Imagem do Gráfico flutuante */
+.hero-imagem-dashboard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Sombra pesada para parecer que flutua */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda fina brilhante */
+    transition: transform 0.4s ease;
+}
+
+/* Efeito de flutuação ao passar o mouse */
+.hero-imagem-dashboard img:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Ajuste de tela para Notebooks menores e Celulares */
+@media (max-width: 992px) {
+    .hero-conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .hero-texto {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .hero-texto h1 {
+        font-size: 36px;
+    }
+    .hero-texto p {
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================
+   🔥 AJUSTE DEFINITIVO: LOGO GRANDE E VISÍVEL
+   ========================================== */
+
+.header-saiba-mais .logo-container {
+    width: 260px;           /* Garante um bom espaço para o formato horizontal */
+    height: auto;           /* Libera a altura para não achatar a logo */
+    background-color: #ffffff;
+    border-radius: 6px;     /* Cantos sutis */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;     /* Espaçamento interno para respirar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+/* Força o desenho da logo a crescer e ocupar o espaço */
+.header-saiba-mais .logo-container img {
+    width: 100% !important;  /* Obriga a imagem a usar toda a largura disponível */
+    height: auto !important; /* Mantém a proporção sem distorcer */
+    max-height: none !important; /* Remove qualquer trava de altura anterior */
+    object-fit: contain;
+    transform: none;         /* Limpa zooms antigos que quebravam o layout */
+}
+
+/* ==========================================
+   🔒 TELA: ESQUECI A SENHA
+   ========================================== */
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 60vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #0b4a3a; /* Mantendo o verde escuro do seu projeto */
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form-container p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn-enviar {
+    width: 100%;
+    background-color: #0b4a3a;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #08362a;
+}
+
+.btn-back {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   🔒 TELA: ESQUECI A SENHA (CORES MAXLUCRO)
+   ========================================== */
+
+/* Fundo da tela com um degradê suave para destacar a caixa */
+.saiba-mais-container {
+    background: linear-gradient(135deg, #f4f7f6 0%, #e9f0ee 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centraliza o formulário perfeitamente na tela */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* Caixa do formulário branca e bem destacada */
+.form-container {
+    background-color: #ffffff;
+    padding: 45px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(11, 74, 58, 0.08);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título em Verde Escuro */
+.form-container h2 {
+    color: #0b4a3a; 
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.form-container p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Campos de entrada */
+.input-group {
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+/* Label em Verde Escuro */
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0b4a3a;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+/* Borda laranja ao focar no campo de digitação */
+.input-group input:focus {
+    border-color: #e68a22; 
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.1);
+}
+
+/* 🟠 Botão Principal no Laranja do Sistema */
+.btn-enviar {
+    width: 100%;
+    background-color: #e68a22; 
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
+}
+
+.btn-enviar:hover {
+    background-color: #e07b00; 
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.3);
+}
+
+/* Botão de voltar no cabeçalho verde */
+.btn-back {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+/* ============================================================
+   🔒 TELAS DE ACESSO: ESQUECI SENHA, CÓDIGO, NOVA SENHA E CADASTRO
+   ============================================================ */
+
+/* Fundo da tela com um degradê suave para destacar a caixa */
+.saiba-mais-container {
+    background: linear-gradient(135deg, #f4f7f6 0%, #e9f0ee 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centraliza o formulário perfeitamente na tela */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* Caixa do formulário branca e bem destacada */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(11, 74, 58, 0.08);
+    max-width: 440px; /* Um pouquinho mais larga para o cadastro ficar confortável */
+    width: 100%;
+    text-align: center;
+}
+
+/* Título em Verde Escuro MaxLucro */
+.form-container h2 {
+    color: #0b4a3a; 
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.form-container p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Campos de entrada */
+.input-group {
+    text-align: left;
+    margin-bottom: 18px; /* Margem sutilmente menor para equilibrar a tela de cadastro */
+}
+
+/* Label em Verde Escuro */
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b4a3a;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+/* Borda laranja idêntica ao focar no campo de digitação */
+.input-group input:focus {
+    border-color: #ff8c00; 
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.1);
+}
+  /* ============================================================
+   🔒 TELAS DE ACESSO: ESQUECI SENHA, CÓDIGO, NOVA SENHA E CADASTRO
+   ============================================================ */
+
+/* Fundo da tela com um degradê suave para destacar a caixa */
+.saiba-mais-container {
+    background: linear-gradient(135deg, #f4f7f6 0%, #e9f0ee 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centraliza o formulário perfeitamente na tela */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* Caixa do formulário branca e bem destacada */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(11, 74, 58, 0.08);
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título em Verde Escuro MaxLucro */
+.form-container h2 {
+    color: #0b4a3a; 
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.form-container p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Campos de entrada */
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+/* Label em Verde Escuro */
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b4a3a;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+/* Borda com o novo laranja ao focar no campo de digitação */
+.input-group input:focus {
+    border-color: #e68a22; 
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(230, 138, 34, 0.1);
+}
+
+/* 🟠 Botão Principal no Novo Laranja MaxLucro */
+.btn-enviar {
+    width: 100%;
+    background-color: #e68a22; 
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(230, 138, 34, 0.2);
+    margin-top: 10px;
+}
+
+/* Efeito Hover sutilmente mais escuro baseado na cor nova */
+.btn-enviar:hover {
+    background-color: #c97416; 
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(230, 138, 34, 0.3);
+}
+
+/* Botão de voltar no cabeçalho verde */
+.btn-back {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}

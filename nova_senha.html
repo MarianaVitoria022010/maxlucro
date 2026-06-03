@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxLucro - Redefinir Senha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="saiba-mais-container">
+        <header class="header-saiba-mais">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo MaxLucro">
+            </div>
+            <a href="{{ url_for('index') }}" class="btn-back">Cancelar</a>
+        </header>
+
+        <section class="form-section">
+            <div class="form-container">
+                <h2>Nova Senha</h2>
+                <p>Crie uma senha forte e segura para acessar a sua conta MaxLucro.</p>
+                
+                <form action="{{ url_for('nova_senha') }}" method="POST">
+                    <div class="input-group">
+                        <label for="nova_senha">Nova Senha</label>
+                        <input type="password" id="nova_senha" name="nova_senha" placeholder="Digite a nova senha" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirmar_senha">Confirmar Nova Senha</label>
+                        <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme a nova senha" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Alterar Senha</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

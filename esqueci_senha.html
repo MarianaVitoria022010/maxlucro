@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxLucro - Recuperar Senha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="saiba-mais-container">
+        <header class="header-saiba-mais">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo MaxLucro">
+            </div>
+            <a href="{{ url_for('index') }}" class="btn-back">Voltar para o Login</a>
+        </header>
+
+        <section class="form-section">
+            <div class="form-container">
+                <h2>Recuperar sua Senha</h2>
+                <p>Digite o e-mail cadastrado na sua conta. Nós enviaremos um link para você redefinir a sua senha.</p>
+                
+                <form action="{{ url_for('esqueci_senha') }}" method="POST">
+                    <div class="input-group">
+                        <label for="email">E-mail Cadastrado</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Link de Recuperação</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
